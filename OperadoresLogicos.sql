@@ -45,3 +45,18 @@ where brand in ('HONDA', 'TOYOTA', 'RENAULT') -- cria uma lista
 select distinct first_name
 from sales.customers
 where first_name like 'ANA%'
+
+
+
+-- EX5 Uso do comando ILIKE (ignora maisculo e minusculo)
+
+select distinct first_name
+from sales.customers
+where first_name ilike 'ana%'
+
+
+--EX6 Uso do comando IS NULL
+
+select*
+from temp_tables.regions
+where population is null
