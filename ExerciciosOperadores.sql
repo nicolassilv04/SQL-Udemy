@@ -20,6 +20,23 @@ select
 	email,
 	income,
 	(income / 1200) as salarios_minimos,
-	(income / 1200) >= 5 as "acima de 4 salarios" 
+	(income / 1200) > 4 as "acima de 4 salarios" 
 from sales.customers
 
+
+
+-- (Exercício 3) Na query anterior filtre apenas os clientes que ganham entre
+-- 4 e 5 salários mínimos. Utilize o comando BETWEEN
+
+select
+	email,
+	income,
+	(income / 1200) as salarios_minimos
+from sales.customers
+where (income / 1200) between 4 and 5
+
+
+
+select *
+from sales.products
+where price between 100000 and 200000
