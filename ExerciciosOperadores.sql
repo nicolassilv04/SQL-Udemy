@@ -35,6 +35,7 @@ select
 from sales.customers
 where (income / 1200) between 4 and 5
 
+
 -- (Exercício 4) Selecione o e-mail, cidade e estado dos clientes que moram no estado de 
 -- Minas Gerais e Mato Grosso.
 
@@ -44,3 +45,15 @@ select
 	state
 from sales.customers
 where state in ('MG','MT')
+
+
+
+-- (Exercício 5) Selecione o e-mail, cidade e estado dos clientes que não 
+-- moram no estado de São Paulo.
+
+select
+	email,
+	city,
+	state
+from sales.customers
+where state not in ('SP')
