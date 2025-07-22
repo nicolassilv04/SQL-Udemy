@@ -35,8 +35,12 @@ select
 from sales.customers
 where (income / 1200) between 4 and 5
 
+-- (Exercício 4) Selecione o e-mail, cidade e estado dos clientes que moram no estado de 
+-- Minas Gerais e Mato Grosso.
 
-
-select *
-from sales.products
-where price between 100000 and 200000
+select
+	email,
+	city,
+	state
+from sales.customers
+where state in ('MG','MT')
