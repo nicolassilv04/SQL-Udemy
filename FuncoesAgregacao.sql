@@ -22,10 +22,30 @@ from sales.funnel
 --EX3 
 -- Conte todos os produtos distintos visitados em jan/21
 
-select count(product_id)
+select count(distinct product_id)
 from sales.funnel
 where visit_page_date between '2021-01-01' and '2021-01-31'
 
 
 
 
+--EX4
+-- Calcular preço min, max e medio
+
+select 
+	min(price), max(price), avg(price)
+from sales.products
+
+
+--EX5
+--Informe qual o veiculo mais caro da tabela products
+
+select 
+	max(price)
+from sales.products
+
+--
+
+select *
+from sales.products
+where price = (select max(price) from sales.products)
